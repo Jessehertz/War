@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "100953958727",
+    "project_id": "cards-fb295",
+    "storage_bucket": "cards-fb295.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:100953958727:android:13f34444a3907100da0462",
+        "android_client_info": {
+          "package_name": "com.example.war"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "100953958727-4i0ll0do8legmvd0tmvgljk291o29o8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb_G32VwfE7o5brYfLm92Z6XnR4FWpwMY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "100953958727-4i0ll0do8legmvd0tmvgljk291o29o8r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
