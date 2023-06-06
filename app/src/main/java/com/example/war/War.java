@@ -18,7 +18,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
-
+/**
+ * The class controls gameplay, animation, and rules game "War".
+ */
 public class War extends AppCompatActivity {
     ActionBar actionBar;
     TextView leftScore, rightScore, restart, p1,p2;
@@ -62,7 +64,6 @@ public class War extends AppCompatActivity {
         zoomOut  = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoomin);
 
         player1card.startAnimation(blink);
-
         player1card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,7 +98,6 @@ public class War extends AppCompatActivity {
 
             }
         });
-
 
         player2card.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -135,60 +135,17 @@ public class War extends AppCompatActivity {
 
         });
 
-
         rand = new Random();
         restart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 v.startAnimation(fadeOut);
 
-                /*String PACKAGE_NAME = getApplicationContext().getPackageName();
-
-                int imgId = getResources().getIdentifier(PACKAGE_NAME+":drawable/card"+0 , null, null);
-                player1cardView.startAnimation(slideOutUp);
-                player1card.setImageBitmap(BitmapFactory.decodeResource(getResources(),imgId));
-
-                player2card.startAnimation(slideRight);
-                int imgId2 = getResources().getIdentifier(PACKAGE_NAME+":drawable/card"+0 , null, null);
-                player2card.setImageBitmap(BitmapFactory.decodeResource(getResources(),imgId2));
-
-                left = 0;
-                leftScore.setText(left+"");
-
-                right = 0;
-                rightScore.setText(right+"");*/
-
                 Intent intent = new Intent(getApplicationContext(), Player.class);
                 startActivity(intent);
                 finish();
             }
         });
-
-        /*start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                v.startAnimation(fadeOut);
-
-                int L = rand.nextInt(12) + 1;
-                int R = rand.nextInt(12) + 1;
-
-                String PACKAGE_NAME = getApplicationContext().getPackageName();
-
-                int imgId = getResources().getIdentifier(PACKAGE_NAME+":drawable/card"+L , null, null);
-                player1card.startAnimation(slideOutUp);
-                player1card.setImageBitmap(BitmapFactory.decodeResource(getResources(),imgId));
-
-                player2card.startAnimation(slideRight);
-                int imgId2 = getResources().getIdentifier(PACKAGE_NAME+":drawable/card"+R , null, null);
-                player2card.setImageBitmap(BitmapFactory.decodeResource(getResources(),imgId2));
-
-
-
-
-            }
-        });*/
-
-
     }
 
     public void score(){
@@ -216,7 +173,6 @@ public class War extends AppCompatActivity {
         }
         else{
             Toast.makeText(getApplicationContext(), "WAR", Toast.LENGTH_SHORT).show();
-
         }
 
         if (left == 7){
@@ -240,9 +196,8 @@ public class War extends AppCompatActivity {
                     startActivity(intent);
                 }
             }, 3500);
-
-
         }
+
         if (right == 7){
             new AlertDialog.Builder(War.this)
                     .setMessage(p2.getText()+" has won!")

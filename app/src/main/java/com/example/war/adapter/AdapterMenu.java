@@ -27,6 +27,9 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+/**
+ * This class represents an adapter that controls the list of games that will be created.
+ */
 public class AdapterMenu extends RecyclerView.Adapter<AdapterMenu.ProfileViewHolder>  {
     private ArrayList<MenuItems> profileList;
     Animation  animation = AnimationUtils.loadAnimation(Menu.context, R.anim.fadeout);;

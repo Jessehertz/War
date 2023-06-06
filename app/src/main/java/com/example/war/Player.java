@@ -12,12 +12,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+/**
+ * The class controls the and creates the name of the players.
+ */
 public class Player extends AppCompatActivity {
 
     EditText player1, player2;
     ImageView start;
     String p1,p2;
-    Animation fadeIn,fadeOut,slideLeft,slideRight;
+    Animation fadeOut;
     ActionBar actionBar;
 
     @Override
@@ -50,7 +53,6 @@ public class Player extends AppCompatActivity {
                     intent.putExtra("p2", p2);
                     startActivity(intent);
                     finish();
-
                 }
 
             }

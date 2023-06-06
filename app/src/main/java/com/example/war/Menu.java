@@ -10,22 +10,21 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-
 import com.example.war.adapter.AdapterMenu;
 import com.example.war.model.MenuItems;
-
 import java.util.ArrayList;
 
+/**
+ * The class controls the adapter and and the list of games listed.
+ */
 public class Menu extends AppCompatActivity {
     public  static Context context;
     public static RecyclerView recyclerView;
-    public static ConstraintLayout popup;
     RecyclerView.Adapter adapter;
     public static RecyclerView.LayoutManager layoutManager;
     ArrayList<MenuItems> profileList;
     Animation fadeout;
     ActionBar actionBar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,10 +50,6 @@ public class Menu extends AppCompatActivity {
 
         profileList.add(new MenuItems(getResources().getIdentifier(PACKAGE_NAME+":drawable/war"
                 , null, null), "War"));
-        profileList.add(new MenuItems(getResources().getIdentifier(PACKAGE_NAME+":drawable/crazy8"
-                , null, null), "Crazy 8"));
-
-
     }
 
     @Override
